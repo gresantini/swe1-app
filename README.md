@@ -1,3 +1,11 @@
+![GitHub Workflow Status (with event)](https://github.com/gresantini/swe1-app/actions/workflows/django.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg)
+![CI](https://img.shields.io/github/actions/workflow/status/gresantini/swe1-app/django.yml?label=CI%20Build&logo=github)
+![Coverage](https://img.shields.io/badge/coverage-pending-yellow.svg)
+
+
+
+
 # Django Polls App – CI Setup with GitHub Actions
 
 ## Overview
