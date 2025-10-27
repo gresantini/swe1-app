@@ -14,10 +14,43 @@ At this stage, the focus is on setting up automated testing and workflow integra
 - Integrated with **GitHub Actions** to automatically test code on every push.
 
 ---
-
+## Project Structure
+djangotutorial/
+├── .ebextensions/
+├── .elasticbeanstalk/
+├── .github/
+│ └── workflows/
+│ └── django.yml
+├── mysite/
+│ ├── init.py
+│ ├── settings.py
+│ ├── urls.py
+│ ├── wsgi.py
+│ └── asgi.py
+├── polls/
+│ ├── pycache/
+│ ├── migrations/
+│ ├── templates/
+│ ├── init.py
+│ ├── admin.py
+│ ├── apps.py
+│ ├── models.py
+│ ├── tests.py
+│ ├── urls.py
+│ └── views.py
+├── staticfiles/
+├── studybuddy/
+├── venv/
+├── .ebignore
+├── .gitignore
+├── db.sqlite3
+├── manage.py
+├── Procfile
+├── requirements.txt
+└── README.md
 ## Local Setup Instructions
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/gresantini/swe1-app.git
+cd swe1-app
