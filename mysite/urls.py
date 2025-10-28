@@ -1,19 +1,20 @@
-from django.http import HttpResponse
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
+from django.views.generic import RedirectView
 
 urlpatterns = [
-<<<<<<< HEAD
-    path("", lambda request: HttpResponse("Welcome to my Django app! 🎉")),
-    path("polls/", include("polls.urls")),
-=======
     # Root URL redirects to login page
-    path("", RedirectView.as_view(url="/studybuddy/login/")),
+    path("", RedirectView.as_view(url="/studybuddy/login/")),  # noqa: E501
+
     # Include the studybuddy app URLs with namespace
     path(
         "studybuddy/",
         include(("studybuddy.urls", "studybuddy"), namespace="studybuddy"),
     ),
->>>>>>> 294059f (Add black, flake8, and coveralls to requirements.txt)
+
+    # Include the polls app URLs
+    path("polls/", include("polls.urls")),
+
+    # Admin site
     path("admin/", admin.site.urls),
 ]

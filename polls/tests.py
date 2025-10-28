@@ -1,6 +1,3 @@
-from django.test import TestCase
+# from django.test import TestCase
 
-
-class PollsBasicTest(TestCase):
-    def test_math(self):
-        self.assertEqual(2 + 2, 4)
+# Create your tests here.
