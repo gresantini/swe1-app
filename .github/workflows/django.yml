@@ -1,4 +1,4 @@
-name: Django CI with Coverage
+name: Django CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  CI:
     runs-on: windows-latest
 
     steps:
@@ -23,16 +23,22 @@ jobs:
         run: python -m pip install --upgrade pip
 
       - name: Install dependencies
-        run: pip install -r requirements.txt coverage coveralls
+        run: pip install -r requirements.txt
 
       - name: Run migrations
         run: python manage.py migrate
 
+      - name: Check code formatting with black
+        run: black --check .
+
+      - name: Run flake8 linter
+        run: flake8 .
+
       - name: Run tests with coverage
-        run: coverage run manage.py test
+        run: coverage run --source=polls manage.py test polls
 
       - name: Upload coverage to Coveralls
-        env:
-          COVERALLS_REPO_TOKEN: DqOqn3b79rmn3CLwHoxOcvOrRm6t0CbQi
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
