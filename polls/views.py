@@ -46,7 +46,8 @@ def vote(request, question_id):
     else:
         selected_choice.votes = F("votes") + 1
         selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing with POST data.
+        # Always return an HttpResponseRedirect after successfully dealing
+        # with POST data.
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
 
 
