@@ -24,7 +24,10 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("question_text", models.CharField(max_length=200)),
-                ("pub_date", models.DateTimeField(verbose_name="date published")),  # noqa: E501
+                (
+                    "pub_date",
+                    models.DateTimeField(verbose_name="date published"),
+                ),  # noqa: E501
             ],
         ),
         migrations.CreateModel(

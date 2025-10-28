@@ -25,7 +25,9 @@ def custom_logout(request):
 
 
 def home(request):
-    return render(request, "studybuddy/home.html")  # simple homepage after login  # noqa: E501
+    return render(
+        request, "studybuddy/home.html"
+    )  # simple homepage after login  # noqa: E501
 
 
 def custom_register(request):
@@ -39,7 +41,9 @@ def custom_register(request):
         elif User.objects.filter(username=username).exists():
             messages.error(request, "Username already exists.")
         else:
-            user = User.objects.create_user(username=username, password=password)    # noqa: E501
+            user = User.objects.create_user(
+                username=username, password=password
+            )  # noqa: E501
             user.save()
             login(request, user)  # auto login after registration
             return redirect("studybuddy:home")

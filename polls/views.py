@@ -48,7 +48,9 @@ def vote(request, question_id):
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing   # noqa: E501
         # with POST data.
-        return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))  # noqa: E501
+        return HttpResponseRedirect(
+            reverse("polls:results", args=(question.id,))
+        )  # noqa: E501
 
 
 # ---------- Authentication Views ----------
