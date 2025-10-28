@@ -7,4 +7,3 @@ urlpatterns = [
     path("studybuddy/", include("studybuddy.urls")),
     path("admin/", admin.site.urls),
 ]
-
