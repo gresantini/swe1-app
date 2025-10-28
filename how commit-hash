@@ -1,0 +1,28 @@
+[33m9139ea2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mGreta[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Greta[m[33m)[m Merge pull request #36 from Makendy-Midouin-STAC-Software-Engineer/develop
+[33ma45c5ca[m[33m ([m[1;31morigin/develop[m[33m)[m Merge pull request #35 from Makendy-Midouin-STAC-Software-Engineer/jonathan
+[33m77097e2[m Fix AWS deployment errors - Remove PostgreSQL dependency (using SQLite). This fixes the 'postgresql11-devel not available' error during AWS EB deployment.
+[33m07c6c82[m Fix ALLOWED_HOSTS for AWS deployment - Allow all hosts in production mode (DEBUG=False) as AWS EB handles host validation at load balancer level. Resolves deployment errors.
+[33m0b3fb3e[m Remove email field from registration - Simplified registration to username and password only for cleaner deployment. All core features working: synchronized Pomodoro timer, room/message management, notes, and admin panel.
+[33mb498e35[m Simplify authentication - Remove email verification requirement for easier deployment. Email is now optional, users can register and login immediately. Email verification code preserved for future sprint if needed.
+[33m05742a6[m Remove cache files from version control
+[33m9a3afa0[m Implement synchronized Pomodoro timer - Timer now syncs in real-time across all users in a room. Only room creators can control start/pause/reset. All users see the same timer counting down simultaneously. Fixes timer reset issue when multiple users join.
+[33mc96d60b[m Enhanced admin panel with full content management controls - Admins can manage all rooms, messages, and notes while maintaining email verification security
+[33m5771431[m Add Pomodoro timer, room/message deletion, and email authentication features - Production ready with full email verification, password reset, persistent Pomodoro timer across page reloads, room deletion for creators, message deletion, and AWS deployment configuration
+[33mbaf9de8[m Merge studybuddy features: combine Notes and Rooms functionality with improved UI
+[33m170fc19[m Merge pull request #33 from Makendy-Midouin-STAC-Software-Engineer/Greta
+[33mf3734bc[m Merge pull request #34 from Makendy-Midouin-STAC-Software-Engineer/Jonathan
+[33m2a87706[m[33m ([m[1;31morigin/Jonathan[m[33m)[m Add Study Buddy app with authentication, rooms, and messaging features
+[33mf36cbbf[m Added personal notes feature with create, edit, and delete functionality
+[33ma191a61[m Merge pull request #31 from Makendy-Midouin-STAC-Software-Engineer/develop
+[33m26bec70[m Merge pull request #21 from Makendy-Midouin-STAC-Software-Engineer/Greta
+[33m9ee6272[m Add login, logout, and registration pages
+[33mc39f43b[m Add studybuddy login, logout, and registration pages
+[33m4875bdf[m Add login and logout functionality with templates
+[33m6cc5dca[m Add homepage route
+[33m98a14d8[m Initial commit
+[33mb6c4658[m Update issue templates
+[33m45fc408[m Update issue templates
+[33m05015bd[m Update issue templates
+[33m4e9a4a4[m Update user-story.md
+[33m5540893[m Update issue templates
+[33m9d798f5[m Initial commit
