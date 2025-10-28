@@ -29,10 +29,10 @@ jobs:
         run: python manage.py migrate
 
       - name: Run tests with coverage
-        run: coverage run --source=polls manage.py test
+        run: coverage run manage.py test
 
       - name: Upload coverage to Coveralls
         env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          COVERALLS_REPO_TOKEN: DqOqn3b79rmn3CLwHoxOcvOrRm6t0CbQi
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: coveralls
-
